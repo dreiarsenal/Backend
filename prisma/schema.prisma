@@ -17,15 +17,18 @@ datasource db {
 
 
 model Category {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   title     String
   icon      String
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
+  expenses  Expense[] 
 }
 
-model Transaction {
-  id        Int      @id @default(autoincrement())
-  title     String
-  amount    Float
-  createdAt DateTime @default(now())
+model Expense {
+  id         Int       @id @default(autoincrement())
+  title      String
+  amount     Float
+  createdAt  DateTime  @default(now())
+  categoryId Int
+  category   Category  @relation(fields: [categoryId], references: [id])
 }

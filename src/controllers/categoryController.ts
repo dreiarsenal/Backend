@@ -14,7 +14,7 @@ export const getCategories = async (req: Request, res: Response) => {
 
 export const createCategory = async (req: Request, res: Response) => {
     const { title, icon } = req.body;
-     console.log('Received category data:', { title, icon })
+    console.log('Received category data:', { title, icon })
     try {
         const category = await prisma.category.create({
             data: {
@@ -27,3 +27,4 @@ export const createCategory = async (req: Request, res: Response) => {
         res.status(500).json({ message: "Error creating category", error });
     }
 };
+

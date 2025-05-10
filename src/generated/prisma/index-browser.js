@@ -127,11 +127,12 @@ exports.Prisma.CategoryScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.TransactionScalarFieldEnum = {
+exports.Prisma.ExpenseScalarFieldEnum = {
   id: 'id',
   title: 'title',
   amount: 'amount',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  categoryId: 'categoryId'
 };
 
 exports.Prisma.SortOrder = {
@@ -144,14 +145,14 @@ exports.Prisma.CategoryOrderByRelevanceFieldEnum = {
   icon: 'icon'
 };
 
-exports.Prisma.TransactionOrderByRelevanceFieldEnum = {
+exports.Prisma.ExpenseOrderByRelevanceFieldEnum = {
   title: 'title'
 };
 
 
 exports.Prisma.ModelName = {
   Category: 'Category',
-  Transaction: 'Transaction'
+  Expense: 'Expense'
 };
 
 /**
