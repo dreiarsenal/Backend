@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import prisma from '../utils/prismaClient';
 
-// Get all categories
+
 export const getCategories = async (req: Request, res: Response) => {
     try {
         const categories = await prisma.category.findMany();
@@ -11,7 +11,7 @@ export const getCategories = async (req: Request, res: Response) => {
     }
 };
 
-// Create a new category
+
 export const createCategory = async (req: Request, res: Response) => {
     const { title, icon } = req.body;
      console.log('Received category data:', { title, icon })
